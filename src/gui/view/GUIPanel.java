@@ -19,6 +19,7 @@ public class GUIPanel extends JPanel
 		this.appController = appController;
 		firstButton = new JButton("Click on the button");
 		appLayout = new SpringLayout();
+
 		
 		setupPanel();
 		setupLayout();
@@ -35,10 +36,15 @@ public class GUIPanel extends JPanel
 		this.add(firstButton);
 	}
 	
+	/**
+	 * Used to hold the constraint positioning for SprringLayout.
+	 * AKA a giant dumping ground for all the xxxx.putConstraint(..) lines.
+	 */
 	private void setupLayout()
 	{
-		appLayout.putConstraint(SpringLayout.SOUTH, firstButton, -134, SpringLayout.SOUTH, this);
-		appLayout.putConstraint(SpringLayout.EAST, firstButton, -135, SpringLayout.EAST, this);
+		appLayout.putConstraint(SpringLayout.NORTH, firstButton, 122, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.EAST, firstButton, -131, SpringLayout.EAST, this);
+		
 	}
 	
 	private void setupListeners()
