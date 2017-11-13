@@ -9,11 +9,37 @@ import javax.swing.SpringLayout;
 
 public class GUIPanel extends JPanel
 {
-	private GUIAppController appConttroller;
+	private GUIAppController appController;
+	private JButton firstButton;
+	private SpringLayout appLayout;
+	
 	
 	public GUIPanel(GUIAppController appController)
 	{
 		super();
-		this.appConttroller = appController;
+		this.appController = appController;
+		firstButton = new JButton("Click on the button");
+		
+		setupPanel();
+	}
+	
+	/**
+	 * Used to add all components to the screen and install a layout manager.
+	 * Also set color :D
+	 */
+	private void setupPanel()
+	{
+		this.setBackground(Color.GREEN);
+		this.add(firstButton);
+	}
+	
+	private void setupLayout()
+	{
+		
+	}
+	
+	private void setupListeners()
+	{
+		
 	}
 }
