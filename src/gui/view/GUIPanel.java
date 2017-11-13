@@ -13,14 +13,15 @@ public class GUIPanel extends JPanel
 	private JButton firstButton;
 	private SpringLayout appLayout;
 	
-	
 	public GUIPanel(GUIAppController appController)
 	{
 		super();
 		this.appController = appController;
 		firstButton = new JButton("Click on the button");
+		appLayout = new SpringLayout();
 		
 		setupPanel();
+		setupLayout();
 	}
 	
 	/**
@@ -30,12 +31,14 @@ public class GUIPanel extends JPanel
 	private void setupPanel()
 	{
 		this.setBackground(Color.GREEN);
+		this.setLayout(appLayout);
 		this.add(firstButton);
 	}
 	
 	private void setupLayout()
 	{
-		
+		appLayout.putConstraint(SpringLayout.SOUTH, firstButton, -134, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.EAST, firstButton, -135, SpringLayout.EAST, this);
 	}
 	
 	private void setupListeners()
