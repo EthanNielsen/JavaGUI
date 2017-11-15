@@ -1,6 +1,10 @@
 package gui.view;
 
 import gui.controller.GUIAppController;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JFrame;
 
 public class GUIFrame extends JFrame
@@ -25,4 +29,11 @@ public class GUIFrame extends JFrame
 		this.setResizable(false);
 		this.setVisible(true);
 	}
+	
+	private void setupListeners()
+	{
+		
+	}
+	
+	
 }
