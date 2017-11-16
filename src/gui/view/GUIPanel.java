@@ -41,7 +41,7 @@ public class GUIPanel extends JPanel
 	
 	/**
 	 * Used to hold the constraint positioning for SprringLayout.
-	 * AKA a giant dumping ground for all the xxxx.putConstraint(..) lines.
+	 * AKA a giant dumping ground for all the xxxx.putConstraint(...) lines.
 	 */
 	private void setupLayout()
 	{
@@ -49,6 +49,10 @@ public class GUIPanel extends JPanel
 		appLayout.putConstraint(SpringLayout.EAST, firstButton, -131, SpringLayout.EAST, this);
 		
 	}
+	
+	/**
+	 * When the button is clicked it calls the changeScreenColor method.
+	 */
 	
 	private void setupListeners()
 	{
